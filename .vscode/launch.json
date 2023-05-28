@@ -6,16 +6,14 @@
     "configurations": [
         {
             "request": "launch",
-            "name": "Launch Program",
+            "name": "Deno tests",
             "type": "node",
-            "program": "${workspaceFolder}/main.ts",
+            "program": "${file}",
             "cwd": "${workspaceFolder}",
             "runtimeExecutable": "/opt/homebrew/bin/deno",
             "runtimeArgs": [
-                "run",
-                "--unstable",
-                "--inspect-wait",
-                "--allow-all"
+                "test",
+                "--inspect-brk"
             ],
             "attachSimplePort": 9229
         }
